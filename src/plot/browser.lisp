@@ -74,7 +74,7 @@
   ;; a dialog box shown on startup when an empty data directory is picked.
   ;; See note at top of file about proper way to set window attributesc
   (let ((chrome-options (append (list (cons "user-data-dir"
-					    (merge-pathnames (format nil "chrome-data-~A" (princ-to-string (gensym)))
+					    (merge-pathnames "chrome-data"
 							     (translate-logical-pathname #P"PLOT:TEMP;")))
 				      (cons "no-default-browser-check" 1)
 				      (cons "no-first-run" 1))
